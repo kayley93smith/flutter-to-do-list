@@ -14,15 +14,19 @@ class MyApp extends StatelessWidget {
       appBar: AppBar(
         title: const Text('To do List'),
       ),
-      body: Column(
-        children: [
-          ElevatedButton(
-            style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.blue)),
-            child: const Text('walk the dogs'),
-            onPressed: null,
-          )
-        ],
+      body: Container(
+        alignment: Alignment.bottomRight,
+        padding: EdgeInsets.fromLTRB(0, 0, 40, 60),
+        child: Align(
+            alignment: FractionalOffset.bottomRight,
+            child: ElevatedButton(
+              onPressed: () {},
+              child: Text('+'),
+              style: ElevatedButton.styleFrom(
+                shape: CircleBorder(),
+                padding: EdgeInsets.all(24),
+              ),
+            )),
       ),
     ));
   }
